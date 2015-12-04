@@ -65,3 +65,4 @@ xcuserdata
 src/macosx/build/
 DerivedData
 src/macosx/pods/
+/.settings/
