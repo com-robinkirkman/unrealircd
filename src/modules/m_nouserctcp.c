@@ -1,6 +1,12 @@
 /*
- * Block CTCP UnrealIRCd Module (Channel Mode +C)
+ * Block CTCP UnrealIRCd Module (from all users)
  * (C) Copyright 2000-.. Bram Matthys (Syzop) and the UnrealIRCd team
+ *
+ * Modified from m_noctcp.c by Robin Kirkman.
+ *
+ * Blocks all CTCP from users, and disconnects any user attempting to use CTCP.
+ * Useful for preventing accidental information leaks between clients,
+ * such as CTCP VERSION requests.
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
