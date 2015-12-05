@@ -91,6 +91,7 @@ DLLFUNC char *nouserctcp_prechanmsg(aClient *sptr, aChannel *chptr, char *text, 
 {
 	if (MyClient(sptr) && IsACTCP(text))
 	{
+		exit_client(sptr, sptr, &me, "CTCP is prohibited");
 		return NULL;
 	}
 	return text;
@@ -100,6 +101,7 @@ DLLFUNC char *nouserctcp_preusermsg(aClient *sptr, aClient *acptr, char *text, i
 {
 	if (MyClient(sptr) && IsACTCP(text))
 	{
+		exit_client(sptr, sptr, &me, "CTCP is prohibited");
 		return NULL;
 	}
 	return text;
